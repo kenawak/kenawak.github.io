@@ -5,15 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>vCard - Personal Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <title>Personal Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="/script.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+
+    .typed {
+      color: #0563bb;
+      display: inline;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,11 +25,11 @@
       <a href="#about-us" class="active" id="active">About-me</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>       
+      <a href="#contact">Contact</a>      
     </nav>
   </header>
 
-  <section style="padding-bottom: 0%; background: rgba(255, 255, 255, 0.8);" id="hero" class="d-flex flex-column justify-content-center">
+  <section style="padding-bottom: 0%; background: rgba(255, 255, 255, 0.8);" id="hero">
     <div class="container" data-aos="zoom-in">
       <h1>Kenawak Ibsa</h1>
       <p>I'm <typed class="typed" data-typed-items="Student,Frontend Developer, Freelancer"></typed></p>
@@ -74,7 +76,7 @@
     <h2 class="heading">Latest<span> Projects</span></h2>
     <div class="portfolio-container">
       <div class="portfolio-box">
-        <img class="img" src="portfolio-1.jpg">
+        <img class="img" src="assets/portfolio-1.jpg">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -82,7 +84,7 @@
         </div>
       </div>
       <div class="portfolio-box">
-        <img class="img" src="portfolio-2.jpg">
+        <img class="img" src="assets/portfolio-2.jpg">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -90,7 +92,7 @@
         </div>
       </div>
       <div class="portfolio-box">
-        <img class="img" src="portfolio-3.jpg">
+        <img class="img" src="assets/portfolio-3.jpg">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -98,7 +100,7 @@
         </div>
       </div>
       <div class="portfolio-box">
-        <img class="img" src="portfolio-4.jpg">
+        <img class="img" src="assets/portfolio-4.jpg">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -106,7 +108,7 @@
         </div>
       </div>
       <div class="portfolio-box">
-        <img class="img" src="portfolio-7.jpg">
+        <img class="img" src="/assets/portfolio-7.jpg">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -114,7 +116,7 @@
         </div>
       </div>
       <div class="portfolio-box">
-        <img class="img" src="code.png">
+        <img class="img" src="/assets/code.png">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -149,6 +151,21 @@
       <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh5JREFUSEu11UmojmEUB/DfFdmQBZIsUeYiWShFlLAxlCFFCZlSkrFEMoQSyRB2hJJhw46FBUpExiJZWBiSBSlEOrfz1Xvf+w2vxT2b73ue53/O/znnOef/tulia+vi+FoR9MBszMBoDKXd5x2e4Cau4HejizYjmIaTGNIiy7dYiVv1cI0ItmB/3rZKFf9iKw6VwfUINuNAlah1MBtwpLhfJpiSqcZ+1HcZVmMHuuFN1ns44tb7cALHMC/3JuFujaRI0BPPMTgPd2Nn/o93+Ihvue6FgXid6+3Ym/9fYAz+xLpIsACXCulFqpFyFTuITQXgrKxAB4LzWFwATcS9KtHzxo8LFz6OdeUMojwjCmmOrBi8BnuIcbl4gAllgk/on4DrmPOfBBewKH2+oF+Z4AMGJOA2pv4nwQ3MTJ/v6F0meISxCYhu6dtMAkrkISmf0Sf3XyFaucMjn8HyguMKnK2YRWBPF7DnsKRMEDW/iq+IFKPPY/xDj340IIp5WJsDF4NYs/m4XCaImYhOGoTpWIWl+JU9vRA/M0KU5FriupfIX2JUTnUnuZ6b8vse43PwJmcWa0qBLiJIyxaViC5st3pidxTrU3/2NHmDXQUpqcEOY2PRp5Fch7iFFt3BUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ9etFDSbbifmhW/nazVJzPO45MZMh2ZFG1Y9no8dkNrRdDMt9JZlxP8A6W4Yxl3/dANAAAAAElFTkSuQmCC"/></a>
     </div>
   </footer>
+
+  <script>
+    const typed = document.querySelector('.typed');
+    if (typed) {
+      let typed_strings = typed.getAttribute('data-typed-items');
+      typed_strings = typed_strings.split(',');
+      new Typed('.typed', {
+        strings: typed_strings,
+        loop: true,
+        typeSpeed: 100,
+        backSpeed: 50,
+        backDelay: 2000
+      });
+    }
+  </script>
 
 </body>
 
