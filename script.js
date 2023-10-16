@@ -3,6 +3,7 @@ let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
 window.onscroll = () => {
+
   sections.forEach(sec => {
     let top = window.scrollY;
     let offset = sec.offsetTop - 150;
@@ -20,15 +21,3 @@ window.onscroll = () => {
 
   header.classList.toggle('sticky', window.scrollY > 100);
 };
-const typed = select('.typed')
-if (typed) {
-  let typed_strings = typed.getAttribute('data-typed-items')
-  typed_strings = typed_strings.split(',')
-  new Typed('.typed', {
-    strings: typed_strings,
-    loop: true,
-    typeSpeed: 100,
-    backSpeed: 50,
-    backDelay: 2000
-  });
-}
