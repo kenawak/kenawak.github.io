@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="/script.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo">Kenawak. </a> 
+    <nav class="navbar">
+      <a href="#about-us" class="active" id="active">About-me</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>       
+    </nav>
+  </header>
+
+  <section style="padding-bottom: 0%; background: rgba(255, 255, 255, 0.8);" id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in">
+      <h1>Kenawak Ibsa</h1>
+      <p>I'm <typed class="typed" data-typed-items="Student,Frontend Developer, Freelancer"></typed></p>
+      <div class="social-links" style="margin-bottom: 19px;">
+       <a href="mailto: kenawakibsa95@gmail.com?subject=Hello%20from%20My%20Website&body=Hi%20there,"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUNJREFUSEvt1T0vREEUxvHfIiKhUItCoZAofQOJSkFCg0RFo0RCpaFQoNBQe+loJDolvoGodCQSX0DhLSN31+Rm19xdttvpJufM8z/PmTn3ljR5lZqsrwVIdjhu0SgO0YsjrOMtqfCTMIFNdGIB1yEUA57QFwneYBrPCUgHtrES5T1gMA/4rCL0gknc1oAM4AwjVeLfxccOqgFCTmjTGvZyIgF8jJ4a8MKA8vkLzOId+1hMtK5uQNC7z1wPFbj8hgAFdCspScAVQqX9CdXHzNlYLi8J2MEWTjFeA3KJOWxguV7ALlazQ0sI+65s/5oJHmT7EPsTIOgM4zwTnMJdVPG/AIJed/ZMg4N4hXbGk1yZsd8GLW5R6vUUchAGqC1nu3wHKUDewQfa85+KE8xEkHocxIAgHl7efB6QqrKheOuXmWzbF50UPhlE6JSPAAAAAElFTkSuQmCC"/></a>
+       <a href="https://t.me/Kenawak_Ibsa"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAa1JREFUSEvV1T9IVlEYx/GPRuRQERE4iEQZOAUGSiCZ0VCbUFTQYKU1hKtCDm5FgdAWRUM5WmRRUINTIFLQFgS1BFFBQyBBQxFo8cB55XJ57/svX8Rnuveec37f5zzP75zbosnR0mR9GxJwEHsxG9VZqx3swDBG0YOf2P6/gFYcxwWcwOZMPz9jd6OALlzEOXQk0W9Yybw/xql6AFtxOpXgUCbTv7iN56nmUaqIK5iuBTCAkSQekGy8T8BdmMOWzOBRvCwCxLbPJ+F9Zc7JH9zAdZzFfUQ/ShGlimR+5QG9uIZjFdz1OtU/sp/C1TIJvMP+0vesTT+gu+Bkh+0mcSeN38JYwdx7uFQOsAmDqd5hu/Y06QUu42uy4gOcrHDFxNy75QDZNVHTIwhXPEkD2/AU0cBKEQftbTVAXiCatoADVcR/pwYv1wvow5sq4jG8iLD2atR6F4Wz5tOqJewsgN3ERCOAM3iIcNphDCGc1JYDxbxHjQDCGePox/ckEF5/hj0ZwXj+1AggxL7gRy7juJJnkm3Dxp350tXag2r9jX/BR7xqFqAwgbXawfoB/gFHxEAZDeKOygAAAABJRU5ErkJggg=="/></a>      
+       <a href="https://github.com/kenawak"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh5JREFUSEu11UmojmEUB/DfFdmQBZIsUeYiWShFlLAxlCFFCZlSkrFEMoQSyRB2hJJhw46FBUpExiJZWBiSBSlEOrfz1Xvf+w2vxT2b73ue53/O/znnOef/tulia+vi+FoR9MBszMBoDKXd5x2e4Cau4HejizYjmIaTGNIiy7dYiVv1cI0ItmB/3rZKFf9iKw6VwfUINuNAlah1MBtwpLhfJpiSqcZ+1HcZVmMHuuFN1ns44tb7cALHMC/3JuFujaRI0BPPMTgPd2Nn/o93+Ihvue6FgXid6+3Ym/9fYAz+xLpIsACXCulFqpFyFTuITQXgrKxAB4LzWFwATcS9KtHzxo8LFz6OdeUMojwjCmmOrBi8BnuIcbl4gAllgk/on4DrmPOfBBewKH2+oF+Z4AMGJOA2pv4nwQ3MTJ/v6F0meISxCYhu6dtMAkrkISmf0Sf3XyFaucMjn8HyguMKnK2YRWBPF7DnsKRMEDW/iq+IFKPPY/xDj340IIp5WJsDF4NYs/m4XCaImYhOGoTpWIWl+JU9vRA/M0KU5FriupfIX2JUTnUnuZ6b8vse43PwJmcWa0qBLiJIyxaViC5st3pidxTrU3/2NHmDXQUpqcEOY2PRp5Fch7iFFt3BUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ9etFDSbbifmhW/nazVJzPO45MZMh2ZFG1Y9no8dkNrRdDMt9JZlxP8A6W4Yxl3/dANAAAAAElFTkSuQmCC"/></a>        
+       <a href="www.linkedin.com/in/kenawak-ibsa-5936721b9"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR1JREFUSEvt1U8rRUEYx/HPpZQNUihlw8JClKz8KQtvQumuvAore2/CRl6GLKTI2kKiLCRKsaAoNDWj6XSyuHNPFkydmplznt935vc8T6el4dFqWF8dYDxCb7sBrwL2sR6Fd7FZCskBA3hAXxR9wyieSiA5YBD3FcAInrsFCDqNWpQO2miSlzKLXnESqfMIFobxglMMYwWz6I23v6zaWa2iO4zFj64wFedHWI7zC2xHwTz+A1vYySGdAB7RH5+6/K/hIL3oBJBiA+gGc+jJSKFQNkoBe2hHkVUcZoBzzJQCphFykUa4yURchMYcKgWEbn/PAGdYyNbf1v+Ug2tM1lRR2Aqef2aCx1j8B6RG++MW1bV+0d6v/PSLTlwN/gJoOFMZN0/g7AAAAABJRU5ErkJggg=="/></a>
+      </div>
+    <a href="#" class="btn">Download CV</a>
+    </div>
+  </section>
+
+
+  <section style="margin-top: 0%;padding-top: 0%;" class="services" id="services">
+    <h2 class="heading">My <span>Services</span></h2>
+    <p>I'm Here To Help Your Next Project!</p>
+    <div class="services-container">
+      <div class="services-box">
+        <h3>Web Development</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ducimus 
+          accusantium asperiores, illum laudantium nulla natus mollitia animi nemo voluptatem, 
+          perspiciatis necessitatibus.</p>
+          <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="services-box">
+        <h3>Web Design</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ducimus 
+          accusantium asperiores, illum laudantium nulla natus mollitia animi nemo voluptatem, 
+          perspiciatis necessitatibus.</p>
+          <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="services-box">
+        <h3>Digital Marketing</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequuntur ducimus 
+          accusantium asperiores, illum laudantium nulla natus mollitia animi nemo voluptatem, 
+          perspiciatis necessitatibus.</p>
+          <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+  </section>
+  
+  <section style="padding-top: 0%;" class="portfolio" id="projects">
+    <h2 class="heading">Latest<span> Projects</span></h2>
+    <div class="portfolio-container">
+      <div class="portfolio-box">
+        <img class="img" src="portfolio-1.jpg">
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Loredfwdgrgrbwds</p>
+          <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh5JREFUSEu11UmojmEUB/DfFdmQBZIsUeYiWShFlLAxlCFFCZlSkrFEMoQSyRB2hJJhw46FBUpExiJZWBiSBSlEOrfz1Xvf+w2vxT2b73ue53/O/znnOef/tulia+vi+FoR9MBszMBoDKXd5x2e4Cau4HejizYjmIaTGNIiy7dYiVv1cI0ItmB/3rZKFf9iKw6VwfUINuNAlah1MBtwpLhfJpiSqcZ+1HcZVmMHuuFN1ns44tb7cALHMC/3JuFujaRI0BPPMTgPd2Nn/o93+Ihvue6FgXid6+3Ym/9fYAz+xLpIsACXCulFqpFyFTuITQXgrKxAB4LzWFwATcS9KtHzxo8LFz6OdeUMojwjCmmOrBi8BnuIcbl4gAllgk/on4DrmPOfBBewKH2+oF+Z4AMGJOA2pv4nwQ3MTJ/v6F0meISxCYhu6dtMAkrkISmf0Sf3XyFaucMjn8HyguMKnK2YRWBPF7DnsKRMEDW/iq+IFKPPY/xDj340IIp5WJsDF4NYs/m4XCaImYhOGoTpWIWl+JU9vRA/M0KU5FriupfIX2JUTnUnuZ6b8vse43PwJmcWa0qBLiJIyxaViC5st3pidxTrU3/2NHmDXQUpqcEOY2PRp5Fch7iFFt3BUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ9etFDSbbifmhW/nazVJzPO45MZMh2ZFG1Y9no8dkNrRdDMt9JZlxP8A6W4Yxl3/dANAAAAAElFTkSuQmCC"/></a>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img class="img" src="portfolio-2.jpg">
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Loredfwdgrgrbwds</p>
+          <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh5JREFUSEu11UmojmEUB/DfFdmQBZIsUeYiWShFlLAxlCFFCZlSkrFEMoQSyRB2hJJhw46FBUpExiJZWBiSBSlEOrfz1Xvf+w2vxT2b73ue53/O/znnOef/tulia+vi+FoR9MBszMBoDKXd5x2e4Cau4HejizYjmIaTGNIiy7dYiVv1cI0ItmB/3rZKFf9iKw6VwfUINuNAlah1MBtwpLhfJpiSqcZ+1HcZVmMHuuFN1ns44tb7cALHMC/3JuFujaRI0BPPMTgPd2Nn/o93+Ihvue6FgXid6+3Ym/9fYAz+xLpIsACXCulFqpFyFTuITQXgrKxAB4LzWFwATcS9KtHzxo8LFz6OdeUMojwjCmmOrBi8BnuIcbl4gAllgk/on4DrmPOfBBewKH2+oF+Z4AMGJOA2pv4nwQ3MTJ/v6F0meISxCYhu6dtMAkrkISmf0Sf3XyFaucMjn8HyguMKnK2YRWBPF7DnsKRMEDW/iq+IFKPPY/xDj340IIp5WJsDF4NYs/m4XCaImYhOGoTpWIWl+JU9vRA/M0KU5FriupfIX2JUTnUnuZ6b8vse43PwJmcWa0qBLiJIyxaViC5st3pidxTrU3/2NHmDXQUpqcEOY2PRp5Fch7iFFt3BUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ9etFDSbbifmhW/nazVJzPO45MZMh2ZFG1Y9no8dkNrRdDMt9JZlxP8A6W4Yxl3/dANAAAAAElFTkSuQmCC"/></a>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img class="img" src="portfolio-3.jpg">
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Loredfwdgrgrbwds</p>
+          <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh5JREFUSEu11UmojmEUB/DfFdmQBZIsUeYiWShFlLAxlCFFCZlSkrFEMoQSyRB2hJJhw46FBUpExiJZWBiSBSlEOrfz1Xvf+w2vxT2b73ue53/O/znnOef/tulia+vi+FoR9MBszMBoDKXd5x2e4Cau4HejizYjmIaTGNIiy7dYiVv1cI0ItmB/3rZKFf9iKw6VwfUINuNAlah1MBtwpLhfJpiSqcZ+1HcZVmMHuuFN1ns44tb7cALHMC/3JuFujaRI0BPPMTgPd2Nn/o93+Ihvue6FgXid6+3Ym/9fYAz+xLpIsACXCulFqpFyFTuITQXgrKxAB4LzWFwATcS9KtHzxo8LFz6OdeUMojwjCmmOrBi8BnuIcbl4gAllgk/on4DrmPOfBBewKH2+oF+Z4AMGJOA2pv4nwQ3MTJ/v6F0meISxCYhu6dtMAkrkISmf0Sf3XyFaucMjn8HyguMKnK2YRWBPF7DnsKRMEDW/iq+IFKPPY/xDj340IIp5WJsDF4NYs/m4XCaImYhOGoTpWIWl+JU9vRA/M0KU5FriupfIX2JUTnUnuZ6b8vse43PwJmcWa0qBLiJIyxaViC5st3pidxTrU3/2NHmDXQUpqcEOY2PRp5Fch7iFFt3BUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ9etFDSbbifmhW/nazVJzPO45MZMh2ZFG1Y9no8dkNrRdDMt9JZlxP8A6W4Yxl3/dANAAAAAElFTkSuQmCC"/></a>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img class="img" src="portfolio-4.jpg">
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Loredfwdgrgrbwds</p>
+          <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh5JREFUSEu11UmojmEUB/DfFdmQBZIsUeYiWShFlLAxlCFFCZlSkrFEMoQSyRB2hJJhw46FBUpExiJZWBiSBSlEOrfz1Xvf+w2vxT2b73ue53/O/znnOef/tulia+vi+FoR9MBszMBoDKXd5x2e4Cau4HejizYjmIaTGNIiy7dYiVv1cI0ItmB/3rZKFf9iKw6VwfUINuNAlah1MBtwpLhfJpiSqcZ+1HcZVmMHuuFN1ns44tb7cALHMC/3JuFujaRI0BPPMTgPd2Nn/o93+Ihvue6FgXid6+3Ym/9fYAz+xLpIsACXCulFqpFyFTuITQXgrKxAB4LzWFwATcS9KtHzxo8LFz6OdeUMojwjCmmOrBi8BnuIcbl4gAllgk/on4DrmPOfBBewKH2+oF+Z4AMGJOA2pv4nwQ3MTJ/v6F0meISxCYhu6dtMAkrkISmf0Sf3XyFaucMjn8HyguMKnK2YRWBPF7DnsKRMEDW/iq+IFKPPY/xDj340IIp5WJsDF4NYs/m4XCaImYhOGoTpWIWl+JU9vRA/M0KU5FriupfIX2JUTnUnuZ6b8vse43PwJmcWa0qBLiJIyxaViC5st3pidxTrU3/2NHmDXQUpqcEOY2PRp5Fch7iFFt3BUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ9etFDSbbifmhW/nazVJzPO45MZMh2ZFG1Y9no8dkNrRdDMt9JZlxP8A6W4Yxl3/dANAAAAAElFTkSuQmCC"/></a>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img class="img" src="portfolio-7.jpg">
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Loredfwdgrgrbwds</p>
+          <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh5JREFUSEu11UmojmEUB/DfFdmQBZIsUeYiWShFlLAxlCFFCZlSkrFEMoQSyRB2hJJhw46FBUpExiJZWBiSBSlEOrfz1Xvf+w2vxT2b73ue53/O/znnOef/tulia+vi+FoR9MBszMBoDKXd5x2e4Cau4HejizYjmIaTGNIiy7dYiVv1cI0ItmB/3rZKFf9iKw6VwfUINuNAlah1MBtwpLhfJpiSqcZ+1HcZVmMHuuFN1ns44tb7cALHMC/3JuFujaRI0BPPMTgPd2Nn/o93+Ihvue6FgXid6+3Ym/9fYAz+xLpIsACXCulFqpFyFTuITQXgrKxAB4LzWFwATcS9KtHzxo8LFz6OdeUMojwjCmmOrBi8BnuIcbl4gAllgk/on4DrmPOfBBewKH2+oF+Z4AMGJOA2pv4nwQ3MTJ/v6F0meISxCYhu6dtMAkrkISmf0Sf3XyFaucMjn8HyguMKnK2YRWBPF7DnsKRMEDW/iq+IFKPPY/xDj340IIp5WJsDF4NYs/m4XCaImYhOGoTpWIWl+JU9vRA/M0KU5FriupfIX2JUTnUnuZ6b8vse43PwJmcWa0qBLiJIyxaViC5st3pidxTrU3/2NHmDXQUpqcEOY2PRp5Fch7iFFt3BUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ9etFDSbbifmhW/nazVJzPO45MZMh2ZFG1Y9no8dkNrRdDMt9JZlxP8A6W4Yxl3/dANAAAAAElFTkSuQmCC"/></a>
+        </div>
+      </div>
+      <div class="portfolio-box">
+        <img class="img" src="code.png">
+        <div class="portfolio-layer">
+          <h4>Web Design</h4>
+          <p>Loredfwdgrgrbwds</p>
+          <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh5JREFUSEu11UmojmEUB/DfFdmQBZIsUeYiWShFlLAxlCFFCZlSkrFEMoQSyRB2hJJhw46FBUpExiJZWBiSBSlEOrfz1Xvf+w2vxT2b73ue53/O/znnOef/tulia+vi+FoR9MBszMBoDKXd5x2e4Cau4HejizYjmIaTGNIiy7dYiVv1cI0ItmB/3rZKFf9iKw6VwfUINuNAlah1MBtwpLhfJpiSqcZ+1HcZVmMHuuFN1ns44tb7cALHMC/3JuFujaRI0BPPMTgPd2Nn/o93+Ihvue6FgXid6+3Ym/9fYAz+xLpIsACXCulFqpFyFTuITQXgrKxAB4LzWFwATcS9KtHzxo8LFz6OdeUMojwjCmmOrBi8BnuIcbl4gAllgk/on4DrmPOfBBewKH2+oF+Z4AMGJOA2pv4nwQ3MTJ/v6F0meISxCYhu6dtMAkrkISmf0Sf3XyFaucMjn8HyguMKnK2YRWBPF7DnsKRMEDW/iq+IFKPPY/xDj340IIp5WJsDF4NYs/m4XCaImYhOGoTpWIWl+JU9vRA/M0KU5FriupfIX2JUTnUnuZ6b8vse43PwJmcWa0qBLiJIyxaViC5st3pidxTrU3/2NHmDXQUpqcEOY2PRp5Fch7iFFt3BUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ9etFDSbbifmhW/nazVJzPO45MZMh2ZFG1Y9no8dkNrRdDMt9JZlxP8A6W4Yxl3/dANAAAAAElFTkSuQmCC"/></a>
+        </div>
+      </div>
+    </div>    
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me!</span></h2>
+
+    <form action="#">
+      <div class="input-box">
+        <input type="text" placeholder="Full Name">
+        <input type="email" placeholder="Email Address">
+      </div>
+      <div class="input-box">
+        <input type="number++" placeholder="Mobile  Number">
+        <input type="text" placeholder="Email Subject">
+      </div>
+      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+      <input type="submit" value="Send Message" class="btn">
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-text">
+      <p>Copyright &copy; 2023 by KeO | Made With Hate And Love</p>
+    </div>
+    <div class="footer-iconTop">
+      <a href="#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAh5JREFUSEu11UmojmEUB/DfFdmQBZIsUeYiWShFlLAxlCFFCZlSkrFEMoQSyRB2hJJhw46FBUpExiJZWBiSBSlEOrfz1Xvf+w2vxT2b73ue53/O/znnOef/tulia+vi+FoR9MBszMBoDKXd5x2e4Cau4HejizYjmIaTGNIiy7dYiVv1cI0ItmB/3rZKFf9iKw6VwfUINuNAlah1MBtwpLhfJpiSqcZ+1HcZVmMHuuFN1ns44tb7cALHMC/3JuFujaRI0BPPMTgPd2Nn/o93+Ihvue6FgXid6+3Ym/9fYAz+xLpIsACXCulFqpFyFTuITQXgrKxAB4LzWFwATcS9KtHzxo8LFz6OdeUMojwjCmmOrBi8BnuIcbl4gAllgk/on4DrmPOfBBewKH2+oF+Z4AMGJOA2pv4nwQ3MTJ/v6F0meISxCYhu6dtMAkrkISmf0Sf3XyFaucMjn8HyguMKnK2YRWBPF7DnsKRMEDW/iq+IFKPPY/xDj340IIp5WJsDF4NYs/m4XCaImYhOGoTpWIWl+JU9vRA/M0KU5FriupfIX2JUTnUnuZ6b8vse43PwJmcWa0qBLiJIyxaViC5st3pidxTrU3/2NHmDXQUpqcEOY2PRp5Fch7iFFt3BUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ9etFDSbbifmhW/nazVJzPO45MZMh2ZFG1Y9no8dkNrRdDMt9JZlxP8A6W4Yxl3/dANAAAAAElFTkSuQmCC"/></a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
