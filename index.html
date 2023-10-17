@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Personal Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  <script src="app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
   <style>
 
@@ -21,12 +21,18 @@
 <body>
   <header class="header">
     <a href="index.html" class="logo">Kenawak. </a> 
-    <nav class="navbar">
-      <a href="#about-us" class="active" id="active">About-me</a>
+    <nav class="navbar" id="navbar">
+      <a href="#hero" class="active" id="active">About-me</a>
       <a href="#services">Services</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>      
     </nav>
+    <div  class="bx bx-menu" id="bar">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAExJREFUSEtjZKAxYKSx+QyjFhAM4QEJov8EnYVfAYqjsfmA5hZQ6AFU7QMSBzT3Ac3jgOYW0DyIhr4FNI8Dmlsw9ONg1AcoIUDz0hQAbegGGXzv/l0AAAAASUVORK5CYII="/>
+    </div>
+    <div style="display: none;"  class="bx bx-x" id="close">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARNJREFUSEvt1DtKBEEURuFvUkFMlFEwEBF0DYMPUFNxG2IquBOZxEhwA+IKVIxUTH1grKGuQC6U0EhPVTnQmEyFTdV/7j11u3o6Xr2O800ARcP/rugYZ3gfUeoqNnA6qpVcB4c4wQs2WyAruMY89nHRBskB4mAERNBrqvSnk2Xcoo9HbOHrr4DY3waZqg2PgJpLXsBV6uQJMwl8jx185kapBhDnF5OupRSW1dIE1gLCdTgP97EesF2qvlZRhN8kRc9JUXy7w24JUuqgWfkbBphujGexkxygLfwjKYrRDWVzJV05wAGGCC0x57//5rXUySz2cDnOf3CE88xTEZD1cZ+K4ktZs6F0yTUZ2T0TQFFh54q+ARi0NBkujYiHAAAAAElFTkSuQmCC"/>
+    </div>
   </header>
 
   <section style="padding-bottom: 0%; background: rgba(255, 255, 255, 0.8);" id="hero">
@@ -76,7 +82,7 @@
     <h2 class="heading">Latest<span> Projects</span></h2>
     <div class="portfolio-container">
       <div class="portfolio-box">
-        <img class="img" src="/portfolio-1.jpg">
+        <img class="img" src="assets/portfolio-1.jpg">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -84,7 +90,7 @@
         </div>
       </div>
       <div class="portfolio-box">
-        <img class="img" src="/portfolio-2.jpg">
+        <img class="img" src="assets/portfolio-2.jpg">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -92,7 +98,7 @@
         </div>
       </div>
       <div class="portfolio-box">
-        <img class="img" src="/portfolio-3.jpg">
+        <img class="img" src="assets/portfolio-3.jpg">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -100,7 +106,7 @@
         </div>
       </div>
       <div class="portfolio-box">
-        <img class="img" src="/portfolio-4.jpg">
+        <img class="img" src="assets/portfolio-4.jpg">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -108,7 +114,7 @@
         </div>
       </div>
       <div class="portfolio-box">
-        <img class="img" src="/portfolio-7.jpg">
+        <img class="img" src="/assets/portfolio-7.jpg">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -116,7 +122,7 @@
         </div>
       </div>
       <div class="portfolio-box">
-        <img class="img" src="/code.png">
+        <img class="img" src="/assets/code.png">
         <div class="portfolio-layer">
           <h4>Web Design</h4>
           <p>Loredfwdgrgrbwds</p>
@@ -129,7 +135,7 @@
   <section class="contact" id="contact">
     <h2 class="heading">Contact <span>Me!</span></h2>
 
-    <form action="https://formsubmit.co/kenawakibsa95@gmail.com" method="post">
+    <form action="https://formsubmit.co/kenawakibsa95@gmail.com" met;ld="post">
       <div class="input-box">
         <input type="text" placeholder="Full Name">
         <input type="email" placeholder="Email Address">
@@ -153,6 +159,7 @@
   </footer>
 
   <script>
+    
     const typed = document.querySelector('.typed');
     if (typed) {
       let typed_strings = typed.getAttribute('data-typed-items');
@@ -165,6 +172,7 @@
         backDelay: 2000
       });
     }
+    
   </script>
 
 </body>
